@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pengchaoandy.github.io/categories/index.html</loc>
+    
+    <lastmod>2019-01-28T18:56:53.611Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pengchaoandy.github.io/2019/01/28/2048-game/</loc>
     
     <lastmod>2019-01-28T18:27:55.498Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://pengchaoandy.github.io/tags/index.html</loc>
     
     <lastmod>2019-01-28T14:37:50.130Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pengchaoandy.github.io/categories/index.html</loc>
-    
-    <lastmod>2019-01-28T14:27:06.519Z</lastmod>
     
   </url>
   
