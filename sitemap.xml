@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pengchaoandy.github.io/2019/01/28/IR-C-Lecture1/</loc>
+    
+    <lastmod>2019-01-29T01:46:34.452Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pengchaoandy.github.io/2019/01/28/configure-hexo/</loc>
     
-    <lastmod>2019-01-28T19:29:02.447Z</lastmod>
+    <lastmod>2019-01-28T23:54:55.792Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://pengchaoandy.github.io/2019/01/28/2048-game/</loc>
+    
+    <lastmod>2019-01-28T20:46:28.430Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>https://pengchaoandy.github.io/categories/index.html</loc>
     
     <lastmod>2019-01-28T18:56:53.611Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pengchaoandy.github.io/2019/01/28/2048-game/</loc>
-    
-    <lastmod>2019-01-28T18:27:55.498Z</lastmod>
     
   </url>
   

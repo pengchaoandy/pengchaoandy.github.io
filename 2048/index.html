@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8"></meta>
+<head>
+	<title>2048:a game for sophists</title>
+    <link href="source/style.css" rel="stylesheet" type="text/css">
+    <script src="source/jquery-1.11.1.min.js"></script>
+    <script src="source/main.js"></script>
+</head>
+<body onkeydown="keydn(event);" onLoad="preload();">
+<div id="wrapper" >
+<div id="tip">按键盘的上下左右或点按屏幕下方的按钮操作</div>    
+<div id="header">
+<a href="../index.html">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;&nbsp;<a href="2048.html">2048</a>
+</div>
+
+<div id="div1" class="part">
+    <div id="board">
+    	<canvas class="box" id="box0" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box1" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box2" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box3" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box4" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box5" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box6" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box7" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box8" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box9" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box10" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box11" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box12" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box13" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box14" width="100px" height="100px"></canvas>
+        <canvas class="box" id="box15" width="100px" height="100px"></canvas>
+	</div>
+    <div id="control">
+    	<div class="dir" id="up" onClick="upmv();">▲</div>
+        <div class="dir" id="lf" onClick="lfmv();">◀</div>
+        <div class="dir" id="dn" onClick="dnmv();">▼</div>
+        <div class="dir" id="rt" onClick="rtmv();">▶</div>
+    	
+	</div>
+</div>
+<div id="div2" class="part">
+	<div id="txt">
+		<div id="scoretxt">分数 ：0
+		</div>
+		<div id="timetxt">用时 ：0 s
+		</div>
+	</div>
+    <div id="start" onClick="init();">开始</div>
+</div>
+<div id="footer">
+<a target="_blank" href="/update.txt">彭超出品</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+</div>
+</div>
+          
+        
+</body>
+</html>
