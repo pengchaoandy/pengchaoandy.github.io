@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pengchao.site/Hexo/hello-world/</loc>
+    
+    <lastmod>2019-01-31T15:13:49.850Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pengchao.site/Lectures/Big-Data-in-Finance/BDF1/</loc>
     
     <lastmod>2019-01-31T03:47:51.699Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://pengchao.site/Lectures/Asset-Allocation-and-Portfolio-Management/AAPM1/</loc>
     
     <lastmod>2019-01-30T18:36:35.487Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pengchao.site/Hexo/hello-world/</loc>
-    
-    <lastmod>2019-01-30T16:40:49.726Z</lastmod>
     
   </url>
   
