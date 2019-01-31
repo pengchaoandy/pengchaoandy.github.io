@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[Market Microstructure Models Lec1]]></title>
-    <url>%2F2019%2F01%2F30%2FLectures%2FMarket%20Microstructure%20Models%2FMMM1%2F</url>
+    <url>%2F2019%2F01%2F31%2FLectures%2FMarket%20Microstructure%20Models%2FMMM1%2F</url>
     <content type="text"><![CDATA[]]></content>
       <categories>
         <category>Lectures</category>
@@ -11,6 +11,20 @@
       <tags>
         <tag>Lectures</tag>
         <tag>Market Microstructure Models</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Big Data in Finance Lec1]]></title>
+    <url>%2F2019%2F01%2F30%2FLectures%2FBig%20Data%20in%20Finance%2FBDF1%2F</url>
+    <content type="text"><![CDATA[Basics of Machine Learning Model Based Instance Based Supervised Learning Unsupervised Learning Batch Learning Online Learning Least Square Bias-Variance Decomposition Penalization Methods Ridge Regression LASSO Regression Cross Validation Basics of Machine Learning y -&gt; outcome (position of the planet) ML GOAL: Predict y as a function of x gives a training set {(xi,yi)}\{(x_i,y_i)\}{(xi​,yi​)} 2 main ways: Model based Instance based Model Based I choose model y(x,θ)y(x,\theta)y(x,θ), θ\thetaθ is the parameters of the model. Estimate θ^\hat\thetaθ^, given a new point x* not previously observed, y(x∗,θ)=y∗y(x*,\theta) = y*y(x∗,θ)=y∗ e.g. Regression Instance Based establish a similarity metric when a new x∗x*x∗ is given, you compute the corresponding y∗y*y∗ by averaging yiy_iyi​ corresponding to xix_ixi​ “close” to x∗x*x∗ e.g. KNN Supervised Learning {(xi,yi)}\{(x_i,y_i)\}{(xi​,yi​)} is given, yiy_iyi​ have labels. regression KNN Decision trees SVM Unsupervised Learning {xi}\{x_i\}{xi​} is given, We want to find the structure of {xi}\{x_i\}{xi​}. K-means PCA Batch Learning Online Learning keep updating data Least Square y(x,β)=xTβx∈Rnyi≈xiTββ=argmin12∑i=1N∣yi−xiTβ∣2=argmin12∣∣y−xTβ∣∣2⇒∂∂βL(β)=XTXβ−XTy=0⇒β^=(XTX)−1XTyy(x,\beta) = x^T\beta \qquad x\in \mathbb{R}^n \\ y_i \approx x_i^T\beta \\ \beta = argmin \frac{1}{2}\sum_{i=1}^N|y_i - x_i^T\beta|^2 \\ = argmin \frac{1}{2}||y - x^T\beta||^2 \\ \Rightarrow \frac{\partial}{\partial\beta}L(\beta) = X^TX\beta - X^Ty = 0 \\ \Rightarrow \hat\beta = (X^TX)^{-1}X^Ty y(x,β)=xTβx∈Rnyi​≈xiT​ββ=argmin21​i=1∑N​∣yi​−xiT​β∣2=argmin21​∣∣y−xTβ∣∣2⇒∂β∂​L(β)=XTXβ−XTy=0⇒β^​=(XTX)−1XTy KNN : y(x)=1k∑xi∈Nk(x)yiy(x) = \frac{1}{k}\sum_{x_i\in N_k(x)} y_iy(x)=k1​∑xi​∈Nk​(x)​yi​ How KNN is related to expectation is replaced by empirical mean the auditioning is relaxed to k points you can show limK,N→∞1k∑xi∈Nk(x)yi=E[y∣X=x]limK,N→∞KN=0lim_{K,N\rightarrow \infty} \frac{1}{k}\sum_{x_i\in N_k(x)} y_i = \mathbb{E}[y|X=x] \\ lim_{K,N\rightarrow \infty} \frac{K}{N} = 0 limK,N→∞​k1​xi​∈Nk​(x)∑​yi​=E[y∣X=x]limK,N→∞​NK​=0 Y=f(X)+ϵY = f(X) + \epsilon \quadY=f(X)+ϵ Curse of Dimensionality Big data are data usually defined in very high dimension space. You can show that the median distance ddd from the origin to he closest data point is given by P(xi&gt;d,∀i)P(x_i&gt;d, \forall i) P(xi​&gt;d,∀i) [ ] this formula β^\hat\betaβ^​ is an unbiased estimator of E[XTX]−1E[YX]E[X^TX]^{-1}E[YX]E[XTX]−1E[YX] y=XTβ+ϵy = X^T\beta+\epsilony=XTβ+ϵ β^=(XTX)−1XT(Xβ+ϵ)\hat\beta = (X^TX)^{-1}X^T(X\beta+\epsilon)β^​=(XTX)−1XT(Xβ+ϵ) ET[β^]=βE_T[\hat\beta] = \betaET​[β^​]=β Bias-Variance Decomposition f(x)=E[Y∣X=x]f(x) = E[Y|X=x]f(x)=E[Y∣X=x] ⇒min⁡E[(Y−f(X)]\Rightarrow \min E[(Y-f(X)]⇒minE[(Y−f(X)] Let y(x)y(x)y(x) be my model forf(x)f(x)f(x) E[(y−f(x)+f(x)−y(x))2]=E[(y−f(x))2]+E[(f(x))−y(x))2]E[(y-f(x) + f(x) - y(x))^2] = E[(y-f(x))^2] + E[(f(x)) - y(x))^2]E[(y−f(x)+f(x)−y(x))2]=E[(y−f(x))2]+E[(f(x))−y(x))2] since the cross term is zero, use tower property of expectation to prove Penalization Methods Ridge Regression β^=argmin∣∣y−Xβ∣∣2+λ∣∣β∣∣2\hat\beta = argmin||y-X\beta||^2+\lambda||\beta||^2β^​=argmin∣∣y−Xβ∣∣2+λ∣∣β∣∣2 β=(XTX+λI)−1XTy\beta = (X^TX+\lambda I)^{-1}X^Tyβ=(XTX+λI)−1XTy LASSO Regression β^=argmin∣∣y−Xβ∣∣2+λ∑i∣βi∣\hat\beta = argmin||y-X\beta||^2+\lambda\sum_i|\beta_i|β^​=argmin∣∣y−Xβ∣∣2+λ∑i​∣βi​∣ β=(XTX+λI)−1XTy\beta = (X^TX+\lambda I)^{-1}X^Tyβ=(XTX+λI)−1XTy Cross Validation fix λ\lambdaλ divide the T (training set) into K groups of equal size ∀\forall∀ group j train the data on the remaining K-1 groups and compute the EjλE^\lambda_jEjλ​ (mean squared error of group jjj under λ\lambdaλ) CV(λ)=1K∑EjλCV(\lambda) = \frac{1}{K}\sum E^\lambda_jCV(λ)=K1​∑Ejλ​ Big λ\lambdaλ will have high variance. small λ\lambdaλ will have high bias.]]></content>
+      <categories>
+        <category>Lectures</category>
+        <category>Big Data in Finance</category>
+      </categories>
+      <tags>
+        <tag>Lectures</tag>
+        <tag>Big Data</tag>
+        <tag>Finance</tag>
       </tags>
   </entry>
   <entry>
