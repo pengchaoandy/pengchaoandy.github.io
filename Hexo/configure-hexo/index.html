@@ -16,16 +16,7 @@
 
 <html class="theme-next mist use-motion" lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Google AdSense start -->
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-4484538442979617",
-    enable_page_level_ads: true
-  });
-</script>
-  <!-- Google AdSense end -->
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -93,7 +84,7 @@
     root: '/',
     scheme: 'Mist',
     version: '6.7.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -124,7 +115,7 @@
 <meta property="og:description" content="There are some useful tips to configure hexo, especially for nexT theme.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://pengchao.site/Hexo/configure-hexo/2019-01-30-14-07-16.png">
-<meta property="og:updated_time" content="2019-02-01T06:54:12.164Z">
+<meta property="og:updated_time" content="2019-02-04T16:24:04.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Configure Hexo">
 <meta name="twitter:description" content="There are some useful tips to configure hexo, especially for nexT theme.">
@@ -192,9 +183,19 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
   
+  <!-- Google AdSense start -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4484538442979617",
+    enable_page_level_ads: true
+  });
+</script>
+  <!-- Google AdSense end --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
@@ -444,7 +445,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-02-01 01:54:12" itemprop="dateModified" datetime="2019-02-01T01:54:12-05:00">2019-02-01</time>
+                <time title="Modified: 2019-02-04 11:24:04" itemprop="dateModified" datetime="2019-02-04T11:24:04-05:00">2019-02-04</time>
               
             
           </span>
@@ -510,7 +511,7 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                <span title="Symbols count in article">7.5k</span>
+                <span title="Symbols count in article">8.1k</span>
               
 
               
@@ -522,7 +523,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                <span title="Reading time">5 min</span>
+                <span title="Reading time">6 min</span>
               
             </div>
           
@@ -588,7 +589,7 @@
 <p>It can’t show right formula by following those instructions in the website. And I don’t know how to fix it. Some issues for example:</p>
 <ul>
 <li>the code of the formula shows following the formula</li>
-<li><img src="2019-01-30-14-07-16.png" alt="wrong format"></li>
+<li><img src="/Hexo/configure-hexo/2019-01-30-14-07-16.png" alt="wrong format"></li>
 </ul>
 <h3 id="hexo-renderer-markdown-it-plus"><a class="markdownIt-Anchor" href="#hexo-renderer-markdown-it-plus"></a> hexo-renderer-markdown-it-plus</h3>
 <p>This one can work with some extra work.</p>
@@ -608,6 +609,22 @@
 <h1 id="dynamically-preview-the-generated-website"><a class="markdownIt-Anchor" href="#dynamically-preview-the-generated-website"></a> Dynamically preview the generated website</h1>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-browsersync --save</span><br></pre></td></tr></table></figure>
 <p>The website will automatically refresh when you save your modified file.</p>
+<h1 id="uniform-image-link"><a class="markdownIt-Anchor" href="#uniform-image-link"></a> Uniform Image Link</h1>
+<h2 id="problem-description"><a class="markdownIt-Anchor" href="#problem-description"></a> Problem Description</h2>
+<p>If you want to link a picture with an asset folder, you need to use the <code>image_name</code> directly, but this link can not work in editor, which need the link to be <code>asset/image_name</code>.</p>
+<h2 id="solution"><a class="markdownIt-Anchor" href="#solution"></a> solution</h2>
+<p><a href="https://github.com/dangxuandev/hexo-asset-image" target="_blank" rel="noopener">github link</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<p>Also make sure</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>Then the <code>asset/image_name</code> can work properly in hexo.</p>
+<h1 id="add-categories-to-sidebar"><a class="markdownIt-Anchor" href="#add-categories-to-sidebar"></a> Add Categories to Sidebar</h1>
+<p><a href="https://github.com/iissnan/hexo-theme-next/issues/1018" target="_blank" rel="noopener">ref</a></p>
+<p>add</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"category-all-page"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"category-all"</span>&gt;</span></span><br><span class="line">    &#123;&#123; list_categories(&#123;depth: 1&#125;) &#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>to</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout\_custom</span><br></pre></td></tr></table></figure>
+<p>More Hexo API: <a href="https://hexo.io/zh-cn/docs/helpers.html#list-categories" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/helpers.html#list-categories</a></p>
 <h1 id="markdown-learning-material"><a class="markdownIt-Anchor" href="#markdown-learning-material"></a> Markdown Learning Material</h1>
 <ul>
 <li><a href="http://saili.science/2016/10/17/markdown-user-guide/#more" target="_blank" rel="noopener">http://saili.science/2016/10/17/markdown-user-guide/#more</a></li>
@@ -635,7 +652,7 @@
 <li>google adsense</li>
 </ul>
 </li>
-<li><a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html#%E5%8D%9A%E5%AE%A2%E6%8E%A8%E5%B9%BF%E5%8F%8A%E8%B0%B7%E6%AD%8C%E6%90%9C%E7%B4%A2%E4%BC%98%E5%8C%96%EF%BC%88%E5%BF%85%E8%AF%BB%EF%BC%89" target="_blank" rel="noopener">https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html#博客推广及谷歌搜索优化（必读）</a>
+<li><a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html</a>
 <ul>
 <li>TopX</li>
 </ul>
@@ -726,8 +743,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Lectures/Interest-Rate-and-Credit-Models/IIRC1/" rel="prev" title="Interest Rate and Credit Models Lec1: Rates and Curves">
-                Interest Rate and Credit Models Lec1: Rates and Curves <i class="fa fa-chevron-right"></i>
+              <a href="/Lectures/Interest-Rate-and-Credit-Models/IIRC0/" rel="prev" title="Interest Rate and Credit Models Intro">
+                Interest Rate and Credit Models Intro <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -809,7 +826,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -892,8 +909,11 @@
           
             
           
-          
-
+          <div class="category-all-page">
+    <div class="category-all">
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lectures/">Lectures</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Lectures/Asset-Allocation-and-Portfolio-Management/">Asset Allocation and Portfolio Management</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lectures/Big-Data-in-Finance/">Big Data in Finance</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lectures/Interest-Rate-and-Credit-Models/">Interest Rate and Credit Models</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lectures/Market-Microstructure-Models/">Market Microstructure Models</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+</div>
         </div>
       </div>
 
@@ -908,7 +928,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#add-your-own-website"><span class="nav-number">1.</span> <span class="nav-text"> Add Your Own Website</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#method-1"><span class="nav-number">1.1.</span> <span class="nav-text"> Method 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#method-2"><span class="nav-number">1.2.</span> <span class="nav-text"> Method 2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#add-canvas-nest"><span class="nav-number">2.</span> <span class="nav-text"> Add Canvas-nest</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#installation"><span class="nav-number">2.1.</span> <span class="nav-text"> Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#step-1-go-to-next-dir"><span class="nav-number">2.1.1.</span> <span class="nav-text"> Step 1: Go to NexT dir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step-2-get-module"><span class="nav-number">2.1.2.</span> <span class="nav-text"> Step 2: Get module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step-3-set-it-up"><span class="nav-number">2.1.3.</span> <span class="nav-text"> Step 3: Set it up</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#update"><span class="nav-number">2.2.</span> <span class="nav-text"> Update</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hide-powered-by-hexo"><span class="nav-number">3.</span> <span class="nav-text"> Hide Powered by Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#enable-math-environment"><span class="nav-number">4.</span> <span class="nav-text"> Enable Math Environment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-math"><span class="nav-number">4.1.</span> <span class="nav-text"> hexo-math</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#guide-from-hexo-theme-next"><span class="nav-number">4.2.</span> <span class="nav-text"> guide from hexo-theme-next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-pandoc"><span class="nav-number">4.2.1.</span> <span class="nav-text"> hexo-renderer-pandoc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-kramed"><span class="nav-number">4.2.2.</span> <span class="nav-text"> hexo-renderer-kramed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-markdown-it"><span class="nav-number">4.2.3.</span> <span class="nav-text"> hexo-renderer-markdown-it</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-markdown-it-plus"><span class="nav-number">4.2.4.</span> <span class="nav-text"> hexo-renderer-markdown-it-plus</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dynamically-preview-the-generated-website"><span class="nav-number">5.</span> <span class="nav-text"> Dynamically preview the generated website</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#markdown-learning-material"><span class="nav-number">6.</span> <span class="nav-text"> Markdown Learning Material</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reference"><span class="nav-number">7.</span> <span class="nav-text"> Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#add-your-own-website"><span class="nav-number">1.</span> <span class="nav-text"> Add Your Own Website</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#method-1"><span class="nav-number">1.1.</span> <span class="nav-text"> Method 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#method-2"><span class="nav-number">1.2.</span> <span class="nav-text"> Method 2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#add-canvas-nest"><span class="nav-number">2.</span> <span class="nav-text"> Add Canvas-nest</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#installation"><span class="nav-number">2.1.</span> <span class="nav-text"> Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#step-1-go-to-next-dir"><span class="nav-number">2.1.1.</span> <span class="nav-text"> Step 1: Go to NexT dir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step-2-get-module"><span class="nav-number">2.1.2.</span> <span class="nav-text"> Step 2: Get module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step-3-set-it-up"><span class="nav-number">2.1.3.</span> <span class="nav-text"> Step 3: Set it up</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#update"><span class="nav-number">2.2.</span> <span class="nav-text"> Update</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hide-powered-by-hexo"><span class="nav-number">3.</span> <span class="nav-text"> Hide Powered by Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#enable-math-environment"><span class="nav-number">4.</span> <span class="nav-text"> Enable Math Environment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-math"><span class="nav-number">4.1.</span> <span class="nav-text"> hexo-math</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#guide-from-hexo-theme-next"><span class="nav-number">4.2.</span> <span class="nav-text"> guide from hexo-theme-next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-pandoc"><span class="nav-number">4.2.1.</span> <span class="nav-text"> hexo-renderer-pandoc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-kramed"><span class="nav-number">4.2.2.</span> <span class="nav-text"> hexo-renderer-kramed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-markdown-it"><span class="nav-number">4.2.3.</span> <span class="nav-text"> hexo-renderer-markdown-it</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-markdown-it-plus"><span class="nav-number">4.2.4.</span> <span class="nav-text"> hexo-renderer-markdown-it-plus</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dynamically-preview-the-generated-website"><span class="nav-number">5.</span> <span class="nav-text"> Dynamically preview the generated website</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#uniform-image-link"><span class="nav-number">6.</span> <span class="nav-text"> Uniform Image Link</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-description"><span class="nav-number">6.1.</span> <span class="nav-text"> Problem Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution"><span class="nav-number">6.2.</span> <span class="nav-text"> solution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#add-categories-to-sidebar"><span class="nav-number">7.</span> <span class="nav-text"> Add Categories to Sidebar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#markdown-learning-material"><span class="nav-number">8.</span> <span class="nav-text"> Markdown Learning Material</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reference"><span class="nav-number">9.</span> <span class="nav-text"> Reference</span></a></li></ol></div>
             
 
           </div>
@@ -940,7 +960,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">24k</span>
+    <span title="Symbols count total">28k</span>
   
 
   
@@ -949,7 +969,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">18 min</span>
+    <span title="Reading time total">20 min</span>
   
 </div>
 
