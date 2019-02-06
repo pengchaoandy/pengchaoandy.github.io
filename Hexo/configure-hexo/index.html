@@ -115,7 +115,7 @@
 <meta property="og:description" content="There are some useful tips to configure hexo, especially for nexT theme.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://pengchao.site/Hexo/configure-hexo/2019-01-30-14-07-16.png">
-<meta property="og:updated_time" content="2019-02-05T23:55:49.256Z">
+<meta property="og:updated_time" content="2019-02-06T11:03:05.509Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Configure Hexo">
 <meta name="twitter:description" content="There are some useful tips to configure hexo, especially for nexT theme.">
@@ -445,7 +445,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-02-05 18:55:49" itemprop="dateModified" datetime="2019-02-05T18:55:49-05:00">2019-02-05</time>
+                <time title="Modified: 2019-02-06 06:03:05" itemprop="dateModified" datetime="2019-02-06T06:03:05-05:00">2019-02-06</time>
               
             
           </span>
@@ -511,7 +511,7 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                <span title="Symbols count in article">8.2k</span>
+                <span title="Symbols count in article">8.7k</span>
               
 
               
@@ -625,13 +625,20 @@
 <p>to</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">themes\next\layout\_custom</span><br></pre></td></tr></table></figure>
 <p>More Hexo API: <a href="https://hexo.io/zh-cn/docs/helpers.html#list-categories" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/helpers.html#list-categories</a></p>
+<h1 id="click-avatar-to-go-back-to-homepage"><a class="markdownIt-Anchor" href="#click-avatar-to-go-back-to-homepage"></a> Click Avatar to Go Back to Homepage</h1>
+<p>File Position: <code>~/blog/themes/next/layout/_macro/sidebar.swig</code></p>
+<p>Edit this file:</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="addition">+ &lt;a href="/"&gt;</span></span><br><span class="line">  &lt;img class="site-author-image" itemprop="image"</span><br><span class="line">        src="&#123;&#123; url_for( theme.avatar | default(theme.images + '/avatar.gif') ) &#125;&#125;"</span><br><span class="line">        alt="&#123;&#123; theme.author &#125;&#125;" /&gt;</span><br><span class="line"><span class="addition">+ &lt;/a&gt;</span></span><br></pre></td></tr></table></figure>
 <h1 id="markdown-learning-material"><a class="markdownIt-Anchor" href="#markdown-learning-material"></a> Markdown Learning Material</h1>
 <ul>
 <li>
 <p><a href="http://saili.science/2016/10/17/markdown-user-guide/#more" target="_blank" rel="noopener">http://saili.science/2016/10/17/markdown-user-guide/#more</a></p>
 </li>
 <li>
-<p><a href="http://www.access2science.com/latex/Binary.html" target="_blank" rel="noopener">http://www.access2science.com/latex/Binary.html</a></p>
+<p>mathematics symbols <a href="http://www.access2science.com/latex/Binary.html" target="_blank" rel="noopener">http://www.access2science.com/latex/Binary.html</a></p>
+</li>
+<li>
+<p>LaTeX handwritten symbol recognition <a href="http://detexify.kirelabs.org/classify.html" target="_blank" rel="noopener">http://detexify.kirelabs.org/classify.html</a></p>
 </li>
 </ul>
 <h1 id="reference"><a class="markdownIt-Anchor" href="#reference"></a> Reference</h1>
@@ -818,7 +825,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
+              <a href="/">
               <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Chao Peng">
+              </a>
             
               <p class="site-author-name" itemprop="name">Chao Peng</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -933,7 +942,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#add-your-own-website"><span class="nav-number">1.</span> <span class="nav-text"> Add Your Own Website</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#method-1"><span class="nav-number">1.1.</span> <span class="nav-text"> Method 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#method-2"><span class="nav-number">1.2.</span> <span class="nav-text"> Method 2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#add-canvas-nest"><span class="nav-number">2.</span> <span class="nav-text"> Add Canvas-nest</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#installation"><span class="nav-number">2.1.</span> <span class="nav-text"> Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#step-1-go-to-next-dir"><span class="nav-number">2.1.1.</span> <span class="nav-text"> Step 1: Go to NexT dir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step-2-get-module"><span class="nav-number">2.1.2.</span> <span class="nav-text"> Step 2: Get module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step-3-set-it-up"><span class="nav-number">2.1.3.</span> <span class="nav-text"> Step 3: Set it up</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#update"><span class="nav-number">2.2.</span> <span class="nav-text"> Update</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hide-powered-by-hexo"><span class="nav-number">3.</span> <span class="nav-text"> Hide Powered by Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#enable-math-environment"><span class="nav-number">4.</span> <span class="nav-text"> Enable Math Environment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-math"><span class="nav-number">4.1.</span> <span class="nav-text"> hexo-math</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#guide-from-hexo-theme-next"><span class="nav-number">4.2.</span> <span class="nav-text"> guide from hexo-theme-next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-pandoc"><span class="nav-number">4.2.1.</span> <span class="nav-text"> hexo-renderer-pandoc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-kramed"><span class="nav-number">4.2.2.</span> <span class="nav-text"> hexo-renderer-kramed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-markdown-it"><span class="nav-number">4.2.3.</span> <span class="nav-text"> hexo-renderer-markdown-it</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-markdown-it-plus"><span class="nav-number">4.2.4.</span> <span class="nav-text"> hexo-renderer-markdown-it-plus</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dynamically-preview-the-generated-website"><span class="nav-number">5.</span> <span class="nav-text"> Dynamically preview the generated website</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#uniform-image-link"><span class="nav-number">6.</span> <span class="nav-text"> Uniform Image Link</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-description"><span class="nav-number">6.1.</span> <span class="nav-text"> Problem Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution"><span class="nav-number">6.2.</span> <span class="nav-text"> solution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#add-categories-to-sidebar"><span class="nav-number">7.</span> <span class="nav-text"> Add Categories to Sidebar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#markdown-learning-material"><span class="nav-number">8.</span> <span class="nav-text"> Markdown Learning Material</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reference"><span class="nav-number">9.</span> <span class="nav-text"> Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#add-your-own-website"><span class="nav-number">1.</span> <span class="nav-text"> Add Your Own Website</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#method-1"><span class="nav-number">1.1.</span> <span class="nav-text"> Method 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#method-2"><span class="nav-number">1.2.</span> <span class="nav-text"> Method 2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#add-canvas-nest"><span class="nav-number">2.</span> <span class="nav-text"> Add Canvas-nest</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#installation"><span class="nav-number">2.1.</span> <span class="nav-text"> Installation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#step-1-go-to-next-dir"><span class="nav-number">2.1.1.</span> <span class="nav-text"> Step 1: Go to NexT dir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step-2-get-module"><span class="nav-number">2.1.2.</span> <span class="nav-text"> Step 2: Get module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step-3-set-it-up"><span class="nav-number">2.1.3.</span> <span class="nav-text"> Step 3: Set it up</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#update"><span class="nav-number">2.2.</span> <span class="nav-text"> Update</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hide-powered-by-hexo"><span class="nav-number">3.</span> <span class="nav-text"> Hide Powered by Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#enable-math-environment"><span class="nav-number">4.</span> <span class="nav-text"> Enable Math Environment</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-math"><span class="nav-number">4.1.</span> <span class="nav-text"> hexo-math</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#guide-from-hexo-theme-next"><span class="nav-number">4.2.</span> <span class="nav-text"> guide from hexo-theme-next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-pandoc"><span class="nav-number">4.2.1.</span> <span class="nav-text"> hexo-renderer-pandoc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-kramed"><span class="nav-number">4.2.2.</span> <span class="nav-text"> hexo-renderer-kramed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-markdown-it"><span class="nav-number">4.2.3.</span> <span class="nav-text"> hexo-renderer-markdown-it</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo-renderer-markdown-it-plus"><span class="nav-number">4.2.4.</span> <span class="nav-text"> hexo-renderer-markdown-it-plus</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dynamically-preview-the-generated-website"><span class="nav-number">5.</span> <span class="nav-text"> Dynamically preview the generated website</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#uniform-image-link"><span class="nav-number">6.</span> <span class="nav-text"> Uniform Image Link</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-description"><span class="nav-number">6.1.</span> <span class="nav-text"> Problem Description</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solution"><span class="nav-number">6.2.</span> <span class="nav-text"> solution</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#add-categories-to-sidebar"><span class="nav-number">7.</span> <span class="nav-text"> Add Categories to Sidebar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#click-avatar-to-go-back-to-homepage"><span class="nav-number">8.</span> <span class="nav-text"> Click Avatar to Go Back to Homepage</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#markdown-learning-material"><span class="nav-number">9.</span> <span class="nav-text"> Markdown Learning Material</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#reference"><span class="nav-number">10.</span> <span class="nav-text"> Reference</span></a></li></ol></div>
             
 
           </div>
@@ -965,7 +974,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">35k</span>
+    <span title="Symbols count total">41k</span>
   
 
   
@@ -974,7 +983,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">26 min</span>
+    <span title="Reading time total">30 min</span>
   
 </div>
 
