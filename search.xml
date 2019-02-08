@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Market Microstructure Models Lec2]]></title>
+    <url>%2FLectures%2FMarket-Microstructure-Models%2FMMM2%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>Lectures</category>
+        <category>Market Microstructure Models</category>
+      </categories>
+      <tags>
+        <tag>Lectures</tag>
+        <tag>Market Microstructure Models</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Big Data in Finance Lec2]]></title>
     <url>%2FLectures%2FBig-Data-in-Finance%2FBDF2%2F</url>
     <content type="text"><![CDATA[Linear Discriminant Analysis(LDA) K-means Gaussian Mixture Linear Discriminant Analysis(LDA) Chapter 12 Sensitivity Specificity K-means It is an unsupervised learning clustering Gaussian Mixture soft clustering]]></content>
