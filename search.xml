@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Market Microstructure Models Lec2]]></title>
-    <url>%2FLectures%2FMarket-Microstructure-Models%2FMMM2%2F</url>
-    <content type="text"><![CDATA[]]></content>
-      <categories>
-        <category>Lectures</category>
-        <category>Market Microstructure Models</category>
-      </categories>
-      <tags>
-        <tag>Lectures</tag>
-        <tag>Market Microstructure Models</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Big Data in Finance Lec2]]></title>
     <url>%2FLectures%2FBig-Data-in-Finance%2FBDF2%2F</url>
     <content type="text"><![CDATA[Linear Discriminant Analysis(LDA) K-means Gaussian Mixture Linear Discriminant Analysis(LDA) Chapter 12 Sensitivity Specificity K-means It is an unsupervised learning clustering Gaussian Mixture soft clustering]]></content>
@@ -67,19 +54,6 @@
         <tag>Lectures</tag>
         <tag>Asset Allocation</tag>
         <tag>Portfolio Management</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Market Microstructure Models Lec1]]></title>
-    <url>%2FLectures%2FMarket-Microstructure-Models%2FMMM1%2F</url>
-    <content type="text"><![CDATA[Overview of the course Philosophical overview Market structure Order types Two Types Some Variations Hidden orders Market types Auction types Trading venues Zero intelligence models Assumption Conclusion asymptotic book depth Dimensional analysis Spread Slope (density wrt. tick) Volatility Average quote size Characteristic share quantity Market impact Market impact in general Realism of Santa Fe model Implementation of the Santa Fe model R implementation of ZI simulation Overview of the course Market microstructure theory could be viewed as the theory underlying algorithmic trading. Philosophical overview completely random zero intelligence model completely rational strategic trader models reality is somewhere in-between Market structure Order types Two Types market orders limit orders Some Variations Fill or kill Immediate or cancel All or nothing Marketable limit buy order Hidden orders Hidden orders have lower priority than visible orders at the same price level. Often placed between visible bid and ask. Market types Quote-driven Order-driven Hybrid Auction types Batch auctions or call markets! continuous auction or continuous markets Trading venues organized exchanges crossing networks dark pools The BATS order book BZX: Limit order gets rebate, it will have bigger share size at the best bid and ask BYX: Market order gets rebate A large tick stock has a spread nearly all of the time the spread of small tick stock is typically greater than one tick. Zero intelligence models Assumption Limit orders can be placed at any integer price level ppp where −∞&lt;p&lt;∞-\infty &lt; p &lt; \infty−∞&lt;p&lt;∞. If worried about negative prices, think of these as being logarithms of the actual price. Limit sell orders may be placed at any level greater than the best bid b(t)b(t)b(t) at time ttt and limit buy orders at any level less than the best offer a(t)a(t)a(t). In particular, just as in real markets, limit orders may be placed inside the spread (if the current spread is greater than one tick). Market orders arrive randomly at rate μ\muμ. Limit orders (per price level) arrive at rate λ\lambdaλ. A proportion ν\nuν of existing limit orders is canceled. All market orders and limit orders are for one share. All the order flows are modeled as Poisson processes. Conclusion asymptotic book depth the asymptotic book depth far away from the best quote must be given by λ/ν\lambda/\nuλ/ν. d=λν.d=\frac{\lambda}{\nu}. d=νλ​. Dimensional analysis Parameter Dimensions μ\muμ shares/T λ\lambdaλ shares/(ticks T) ν\nuν 1/T Dimensions Parameter combinations shares μ\muμ / ν\nuν T 1 / ν\nuν ticks μ\muμ / λ\lambdaλ Spread s∼μ2&ThinSpace;λs \sim \frac{\mu}{2\,\lambda} s∼2λμ​ Slope (density wrt. tick) λ2μ&ThinSpace;ν.\frac{\lambda^2}{\mu\,\nu}. μνλ2​. Volatility ticksT \frac{ticks}{T} Tticks​ is like change the data to seconds level. and for the variance of any time span, we just need to times the time span. so the dimension is (ticksT)2×T(\frac{ticks}{T})^2 \times T(Tticks​)2×T. ticks2T⇒μ&ThinSpace;νλ\frac{ticks^2}{T} \Rightarrow \frac{\mu\,\sqrt{\nu}}{\lambda} Tticks2​⇒λμν​​ Average quote size Q∼s2&ThinSpace;λ2μ&ThinSpace;ν∼μ2λ2&ThinSpace;λ2μ&ThinSpace;ν=μνQ \sim s^2\,\frac{\lambda^2}{\mu\,\nu} \sim \frac{\mu^2}{\lambda^2}\,\frac{\lambda^2}{\mu\,\nu}=\frac{\mu}{\nu} Q∼s2μνλ2​∼λ2μ2​μνλ2​=νμ​ Characteristic share quantity Nc=μ2&ThinSpace;νN_c=\frac{\mu}{2\,\nu} Nc​=2νμ​ Market impact σ\sigmaσ is volatility, LLL is fraction of average volume. And n is a given number of shares. So the dimension of LLL is TTT L=nμL=\frac{n}{\mu} L=μn​ σ∼μ&ThinSpace;νλ\sigma \sim \frac{\mu\,\sqrt{\nu}}{\lambda} σ∼λμν​​ I(n)∼μνλnμ=1λμνnI(n) \sim \frac{\mu\sqrt{\nu}}{\lambda}\sqrt{\frac{n}{\mu}}=\frac{1}{\lambda}\sqrt{\mu\nu n} I(n)∼λμν​​μn​​=λ1​μνn​ Market impact in general I(n)∼μλ&ThinSpace;f(nNc)=μλ&ThinSpace;f(2&ThinSpace;ν&ThinSpace;nμ)I(n)\sim\frac{\mu}{\lambda}\,f\left(\frac{n}{N_c}\right)=\frac{\mu}{\lambda}\,f\left(\frac{2\,\nu\,n}{\mu}\right) I(n)∼λμ​f(Nc​n​)=λμ​f(μ2νn​) Realism of Santa Fe model In real markets, order depth falls off rapidly away from the best quote. We would therefore not expect the behavior of the Santa Fe model deep in the order book to accurately mimic a real market. However, close to the best quote, the Santa Fe model does appear to capture some salient aspects of real markets. Implementation of the Santa Fe model Only consider the orders in a moving band of width LLL around the current best quotes. Compute the best bid BtB_tBt​ and best offer AtA_tAt​. Compute the number nBn_{B}nB​ of shares on the bid side of the book from level At−1A_t-1At​−1 to level At−LA_t-LAt​−L.] Compute the number nAn_{A}nA​ of shares on the offered side of the book from level Bt+1B_t+1Bt​+1 to level Bt+LB_t+LBt​+L. Draw a new event according to the relative probabilities {PMB,PMS,PLB,PLS,PCS,PCB}∝{μ/2,μ/2,L&ThinSpace;α,L&ThinSpace;α,δ&ThinSpace;nA,δ&ThinSpace;nB} \newcommand{\PP}{\mathbb{P} } \left\{\PP_{MB}, \PP_{MS}, \PP_{LB}, \PP_{LS}, \PP_{CS}, \PP_{CB}\right\} \propto \left\{\mu/2, \mu/2, L\,\alpha, L\,\alpha, \delta\,{n_A}, \delta\,{n_B} \right\} {PMB​,PMS​,PLB​,PLS​,PCS​,PCB​}∝{μ/2,μ/2,Lα,Lα,δnA​,δnB​}. If the selected event is a limit order, draw the relative price level from {1,2,…,L}\left\{1,2,\ldots,L\right\}{1,2,…,L}. If the selected event is a cancellation, select randomly which order within the band to cancel. Update the order book and increment ttt. R implementation of ZI simulation skip]]></content>
-      <categories>
-        <category>Lectures</category>
-        <category>Market Microstructure Models</category>
-      </categories>
-      <tags>
-        <tag>Lectures</tag>
-        <tag>Market Microstructure Models</tag>
       </tags>
   </entry>
   <entry>
